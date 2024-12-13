@@ -1,10 +1,10 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
-
 
 process.on('uncaughtException', (error) => {
     console.error("Unexpected error: ", error);
 });
+
 function createWindow() {
     const win = new BrowserWindow({
         width: 1315,
@@ -13,9 +13,17 @@ function createWindow() {
             preload: path.join(__dirname, 'preload.js'),
             contextIsolation: true,
             enableRemoteModule: false,
-        }
+        },
+        // Mantener el marco para conservar los botones de cerrar, minimizar y maximizar
+        //frame: true,
+        //icon: path.join(__dirname, 'public/BolsiVibe.png'),
     });
+
+    // Cargar la URL de la aplicación
     win.loadURL('http://localhost:4200');
+
+    // Eliminar el menú de la aplicación
+   // Menu.setApplicationMenu(null);
 }
 
 app.whenReady().then(createWindow);
