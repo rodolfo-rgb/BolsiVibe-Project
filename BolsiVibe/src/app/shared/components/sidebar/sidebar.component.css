@@ -1,0 +1,5 @@
+.image-container {
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente la imagen con el texto */
+}
