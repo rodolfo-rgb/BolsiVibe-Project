@@ -15,15 +15,15 @@ function createWindow() {
             enableRemoteModule: false,
         },
         // Mantener el marco para conservar los botones de cerrar, minimizar y maximizar
-        //frame: true,
-        //icon: path.join(__dirname, 'public/BolsiVibe.png'),
+        frame: true,
+        icon: path.join(__dirname, 'public/BolsiVibe.png'),
     });
 
-    // Cargar la URL de la aplicación
+
     win.loadURL('http://localhost:4200');
 
-    // Eliminar el menú de la aplicación
-   // Menu.setApplicationMenu(null);
+    
+   Menu.setApplicationMenu(null);
 }
 
 app.whenReady().then(createWindow);
