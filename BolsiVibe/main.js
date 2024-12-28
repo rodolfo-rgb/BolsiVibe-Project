@@ -22,8 +22,8 @@ function createWindow() {
 
     win.loadURL('http://localhost:4200');
 
-    
-   Menu.setApplicationMenu(null);
+
+    Menu.setApplicationMenu(null);
 }
 
 app.whenReady().then(createWindow);
