@@ -84,9 +84,68 @@
     </div>
 </div>
 
+<!-- Panel de Tarjetas de Crédito -->
+<div class="w-full max-w-2xl mx-auto mt-6 bg-white rounded-lg shadow-md overflow-hidden">
+    <!-- Encabezado del Card -->
+    <div class="flex items-center justify-between px-6 py-4 border-b">
+        <h2 class="text-xl font-semibold flex items-center gap-2">
+            <!-- Icono de Tarjeta desde PNG -->
+            <img src="tarjeta.png" alt="Icono Tarjeta" class="h-8 w-8 object-contain">
+            Mis Tarjetas de Crédito
+        </h2>
+        <button class="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            Nueva Tarjeta
+        </button>
+    </div>
 
-<!-- Nuevo contenedor para la lista de tarjetas de crédito con scroll -->
-<h3 class="text-lg font-semibold text-blue-gray-200 mb-2 mt-6">Tarjetas de Crédito</h3> <!-- Añadido mt-6 -->
+    <!-- Contenido del Card -->
+    <div class="p-6">
+        <!-- Contenedor Scroll -->
+        <div class="max-h-48 overflow-y-auto space-y-4 border-b pb-4">
+            <!-- Tarjeta 1 -->
+            <div
+                class="flex items-center justify-between p-4 bg-gray-100 rounded-lg cursor-pointer hover:bg-blue-100 transition">
+                <span class="font-medium">Visa Clásica</span>
+                <span class="text-lg text-red-500">$2,500</span>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div
+                class="flex items-center justify-between p-4 bg-gray-100 rounded-lg cursor-pointer hover:bg-blue-100 transition">
+                <span class="font-medium">Mastercard Gold</span>
+                <span class="text-lg text-red-500">$1,800</span>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div
+                class="flex items-center justify-between p-4 bg-gray-100 rounded-lg cursor-pointer hover:bg-blue-100 transition">
+                <span class="font-medium">American Express</span>
+                <span class="text-lg text-red-500">$3,200</span>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div
+                class="flex items-center justify-between p-4 bg-gray-100 rounded-lg cursor-pointer hover:bg-blue-100 transition">
+                <span class="font-medium">Tarjeta Extra</span>
+                <span class="text-lg text-red-500">$1,500</span>
+            </div>
+        </div>
+
+        <!-- Deuda Total -->
+        <div class="flex items-center justify-between pt-4 mt-4">
+            <span class="font-semibold">Deuda Total</span>
+            <span class="text-xl font-bold text-red-500">$9,000</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- Nuevo contenedor para la lista de tarjetas de crédito con scroll
+<h3 class="text-lg font-semibold text-blue-gray-200 mb-2 mt-6">Tarjetas de Crédito</h3> 
 <div class="credit-card-list p-4 mt-4 overflow-y-auto rounded-xl shadow-md"
     style="max-height: 160px; background-color: #19243a;">
     <div class="credit-card-item flex items-center p-2 border-b border-blue-gray-300 last:border-none">
@@ -95,7 +154,7 @@
             <p class="font-semibold text-white">Nombre de la Tarjeta 1</p>
             <p class="text-sm text-gray-400">Deuda: $XX.XX</p>
         </div>
-        <!-- Ícono de "+" en círculo con radio más pequeño -->
+        
         <button class="ml-4 p-1 rounded-full bg-gray-700 text-white hover:bg-gray-600 transition-colors duration-200">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor"
                 viewBox="0 0 24 24" stroke-width="2">
@@ -111,7 +170,7 @@
             <p class="font-semibold text-white">Nombre de la Tarjeta 2</p>
             <p class="text-sm text-gray-400">Deuda: $XX.XX</p>
         </div>
-        <!-- Ícono de "+" en círculo con radio más pequeño -->
+        
         <button class="ml-4 p-1 rounded-full bg-gray-700 text-white hover:bg-gray-600 transition-colors duration-200">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor"
                 viewBox="0 0 24 24" stroke-width="2">
@@ -120,4 +179,4 @@
         </button>
 
     </div>
-</div>
+</div> -->
