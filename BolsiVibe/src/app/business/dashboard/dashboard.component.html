@@ -1,7 +1,7 @@
 <button class="mb-12 grid gap-y-10 gap-x-6 md:grid-cols-2 xl:grid-cols-4 w-full">
     <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md col-span-full">
         <div
-            class="bg-clip-border mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-blue-900 to-blue-800 text-white shadow-blue-500/40 shadow-lg absolute -mt-4 grid h-16 w-16 place-items-center">
+            class="bg-clip-border mx-4 rounded-xl overflow-hidden  bg-blue-500 text-white shadow-lg absolute -mt-4 grid h-16 w-16 place-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
                 class="w-6 h-6 text-white">
                 <path d="M12 7.5a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"></path>
@@ -29,60 +29,61 @@
     </div>
 </button>
 
-<h3 class="text-lg font-semibold text-blue-gray-200 mb-2">Cuentas</h3>
-<div class="account-list-container p-4 mt-4 rounded-xl shadow-md" style="background-color: #19243a;">
-    <div class="account-list">
-        <!-- Enlace que envuelve cada cuenta -->
-        <div class="account-item flex items-center p-2 border-b border-blue-gray-300 last:border-none">
-            <img src="path/to/credit-card-icon.png" alt="Icono de Banco" class="w-6 h-6 mr-2">
-            <div class="flex-1">
-                <p class="font-semibold text-white">Nombre de la Cuenta 1</p>
-                <p class="text-sm text-gray-400">Saldo actual: $XX.XX</p>
-            </div>
-            <!-- Ícono de "+" al final con efecto de clic -->
-            <button class="ml-4 text-white hover:text-green-500 transition-colors duration-200">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"></path>
-                </svg>
-            </button>
-        </div>
-        <div class="account-item flex items-center p-2 border-b border-blue-gray-300 last:border-none">
-            <img src="path/to/credit-card-icon.png" alt="Icono de Banco" class="w-6 h-6 mr-2">
-            <div class="flex-1">
-                <p class="font-semibold text-white">Nombre de la Cuenta 2</p>
-                <p class="text-sm text-gray-400">Saldo actual: $XX.XX</p>
-            </div>
-            <!-- Ícono de "+" al final con efecto de clic -->
-            <button class="ml-4 text-white hover:text-green-500 transition-colors duration-200">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"></path>
-                </svg>
-            </button>
-        </div>
-        <div class="account-item flex items-center p-2 border-b border-blue-gray-300 last:border-none">
-            <img src="path/to/credit-card-icon.png" alt="Icono de Banco" class="w-6 h-6 mr-2">
-            <div class="flex-1">
-                <p class="font-semibold text-white">Nombre de la Cuenta 3</p>
-                <p class="text-sm text-gray-400">Saldo actual: $XX.XX</p>
-            </div>
-            <!-- Ícono de "+" al final con efecto de clic -->
-            <button class="ml-4 text-white hover:text-green-500 transition-colors duration-200">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"></path>
-                </svg>
-            </button>
-        </div>
+<!-- Panel de Cuentas -->
+<div class="w-full max-w-2xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+    <!-- Encabezado del Card -->
+    <div class="flex items-center justify-between px-6 py-4 border-b">
+        <h2 class="text-xl font-semibold">Mis Cuentas</h2>
+        <button class="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            Nueva Cuenta
+        </button>
     </div>
 
-    <!-- Saldo Total fuera de la lista, pero dentro del contenedor -->
-    <div class="border-t border-blue-gray-300 mt-4 pt-2">
-        <p class="font-semibold text-white">Saldo Total: <span class="float-right">$XX.XX</span></p>
+    <!-- Contenido del Card -->
+    <div class="p-6">
+        <!-- Contenedor Scroll -->
+        <div class="max-h-48 overflow-y-auto space-y-4 border-b pb-4">
+            <!-- Cuenta 1 -->
+            <div
+                class="flex items-center justify-between p-4 bg-gray-100 rounded-lg cursor-pointer hover:bg-blue-100 transition">
+                <span class="font-medium">Cuenta Principal</span>
+                <span class="text-lg">$5,000</span>
+            </div>
 
+            <!-- Cuenta 2 -->
+            <div
+                class="flex items-center justify-between p-4 bg-gray-100 rounded-lg cursor-pointer hover:bg-blue-100 transition">
+                <span class="font-medium">Cuenta de Ahorros</span>
+                <span class="text-lg">$10,000</span>
+            </div>
+
+            <!-- Cuenta 3 -->
+            <div
+                class="flex items-center justify-between p-4 bg-gray-100 rounded-lg cursor-pointer hover:bg-blue-100 transition">
+                <span class="font-medium">Cuenta de Inversiones</span>
+                <span class="text-lg">$15,000</span>
+            </div>
+
+            <!-- Cuenta 4 -->
+            <div
+                class="flex items-center justify-between p-4 bg-gray-100 rounded-lg cursor-pointer hover:bg-blue-100 transition">
+                <span class="font-medium">Cuenta Extra</span>
+                <span class="text-lg">$7,000</span>
+            </div>
+        </div>
+
+        <!-- Total -->
+        <div class="flex items-center justify-between pt-4 mt-4">
+            <span class="font-semibold">Total</span>
+            <span class="text-xl font-bold">$37,000</span>
+        </div>
     </div>
 </div>
+
 
 <!-- Nuevo contenedor para la lista de tarjetas de crédito con scroll -->
 <h3 class="text-lg font-semibold text-blue-gray-200 mb-2 mt-6">Tarjetas de Crédito</h3> <!-- Añadido mt-6 -->
